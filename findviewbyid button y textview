@@ -1,0 +1,29 @@
+package com.example.cambiovistas.holamundo
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.view.*
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val text: TextView = findViewById(R.id.textito) as TextView
+        text.setOnClickListener {
+            text.setText("Paulita hermosa")
+        }
+
+        val boton: Button = findViewById(R.id.botoncito) as Button
+        boton.setOnClickListener {
+            text.setText("Me llamo pablo lerman un genio totalss")
+        }
+        /*fun main() {
+            println("Hello World!")
+        }*/
+    }
+}
