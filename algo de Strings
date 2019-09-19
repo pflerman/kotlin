@@ -1,0 +1,36 @@
+package com.example.cambiovistas.holamundo
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.view.*
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+
+        var cadena = "pablito\n\ngenio\t\tpepein"
+        var cadena2 = """hola\npepe"""
+        var cadena3 = "Genio"
+
+        val text: TextView = findViewById(R.id.textito) as TextView
+        text.setOnClickListener {
+
+
+            //text.setText("hola " + cadena3.length)
+            //text.setText("mi nombre es $cadena3 pepe ")
+            text.setText("mi nombre es ${cadena3.length} pepe ")
+        }
+
+        val boton: Button = findViewById(R.id.botoncito) as Button
+        boton.setOnClickListener {
+            //text.setText(numeros())
+        }
+
+    }
+}
